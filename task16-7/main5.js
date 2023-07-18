@@ -1,4 +1,4 @@
-makeStrings([
+const makeStrings = ([
     {
        name: "Angelina Jolie",
        age: 80
@@ -19,4 +19,17 @@ makeStrings([
        name: "Bob Ziroll",
        age: 100
    }
- ]));
+ ]);
+
+ let data = makeStrings.map(e => ageCheck(e));
+
+    function ageCheck(e) {
+        if (e.age <= 18){
+            result = `${e.name} is under age!!`;
+        }
+        else {
+            result = `Andrew tate allows ${e.name} to go to the matrix`;
+          }
+        return result;
+    }
+    console.log(data);
